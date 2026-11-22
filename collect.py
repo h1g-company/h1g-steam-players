@@ -1,5 +1,8 @@
+"""Collect Steam concurrent players while tolerating delisted/unreleased apps.
+
+Keep the existing data/<appid>.json contract for MediaWiki widgets.
+"""
 import json
-import os
 import random
 import time
 import urllib.error
@@ -9,102 +12,65 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 UTC = timezone.utc
-NOW = datetime.now(UTC)
-DATA_DIR = Path('data')
-ARCHIVE_DIR = Path('archive')
+DATA = Path('data')
+ARCHIVE = Path('archive')
+STATUS = Path('status') / 'collection.json'
 
 
-def parse_time(s):
-    return datetime.fromisoformat(s.replace('Z', '+00:00')).astimezone(UTC)
+def read_json(path, default):
+    return json.loads(path.read_text(encoding='utf-8')) if path.exists() else default
 
 
-def load_json(path, default):
-    if not path.exists():
-        return default
-    return json.loads(path.read_text(encoding='utf-8'))
-
-
-def save_json(path, obj):
+def write_json(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
-    temp = path.with_suffix(path.suffix + '.tmp')
-    temp.write_text(json.dumps(obj, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
-    temp.replace(path)
+    tmp = path.with_suffix(path.suffix + '.tmp')
+    tmp.write_text(json.dumps(value, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
+    tmp.replace(path)
 
 
-def aggregate(records, period):
-    groups = defaultdict(list)
-    for r in records:
-        t = parse_time(r['timestamp'])
-        key = t.strftime('%Y-%m-%d' if period == 'day' else '%Y-%m')
-        groups[key].append(r)
-    output = []
-    for key, group in sorted(groups.items()):
-        values = [int(r['players']) for r in group]
-        latest = max(group, key=lambda r: parse_time(r['timestamp']))
-        output.append({
-            'timestamp': latest['timestamp'],
-            'players': round(sum(values) / len(values)),
-            'min': min(int(r.get('min', r['players'])) for r in group),
-            'max': max(int(r.get('max', r['players'])) for r in group),
-            'samples': sum(int(r.get('samples', 1)) for r in group),
-            'period': period,
-            'bucket': key
-        })
-    return output
+def dt(row):
+    return datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00')).astimezone(UTC)
 
 
-def compact(appid, records):
-    # Preserve already aggregated records rather than averaging daily aggregates repeatedly.
-    cutoff30 = NOW - timedelta(days=30)
-    cutoff365 = NOW - timedelta(days=365)
-    recent, daily, old = [], [], []
-    for r in records:
-        t = parse_time(r['timestamp'])
-        if t >= cutoff30:
-            recent.append(r)
-        elif t >= cutoff365:
-            daily.append(r)
+def weighted_aggregate(rows, bucket, kind):
+    total = sum(int(r.get('samples', 1)) for r in rows)
+    latest = max(rows, key=dt)
+    return {
+        'timestamp': latest['timestamp'],
+        'players': round(sum(int(r['players']) * int(r.get('samples', 1)) for r in rows) / total),
+        'min': min(int(r.get('min', r['players'])) for r in rows),
+        'max': max(int(r.get('max', r['players'])) for r in rows),
+        'samples': total,
+        'period': kind,
+        'bucket': bucket,
+    }
+
+
+def compact(appid, records, now):
+    cutoff30 = now - timedelta(days=30)
+    cutoff365 = now - timedelta(days=365)
+    recent, daily, old = [], defaultdict(list), []
+    for row in records:
+        stamp = dt(row)
+        if stamp >= cutoff30:
+            recent.append(row)
+        elif stamp >= cutoff365:
+            daily[stamp.strftime('%Y-%m-%d')].append(row)
         else:
-            old.append(r)
+            old.append(row)
 
-    # Daily buckets can contain a mix of raw and pre-aggregated samples.
-    daily_groups = defaultdict(list)
-    for r in daily:
-        daily_groups[parse_time(r['timestamp']).strftime('%Y-%m-%d')].append(r)
-    daily_result = []
-    for key, group in sorted(daily_groups.items()):
-        n = sum(int(r.get('samples', 1)) for r in group)
-        avg = round(sum(int(r['players']) * int(r.get('samples', 1)) for r in group) / n)
-        latest = max(group, key=lambda r: parse_time(r['timestamp']))
-        daily_result.append({
-            'timestamp': latest['timestamp'], 'players': avg,
-            'min': min(int(r.get('min', r['players'])) for r in group),
-            'max': max(int(r.get('max', r['players'])) for r in group),
-            'samples': n, 'period': 'day', 'bucket': key
-        })
-
+    # Archive records only once: archived records are removed from data/.
     if old:
-        archive_path = ARCHIVE_DIR / f'{appid}.json'
-        archived = load_json(archive_path, [])
-        # Store monthly aggregates, including previously archived months.
-        monthly_groups = defaultdict(list)
-        for r in archived + old:
-            key = r.get('bucket') if r.get('period') == 'month' else parse_time(r['timestamp']).strftime('%Y-%m')
-            monthly_groups[key].append(r)
-        monthly = []
-        for key, group in sorted(monthly_groups.items()):
-            n = sum(int(r.get('samples', 1)) for r in group)
-            avg = round(sum(int(r['players']) * int(r.get('samples', 1)) for r in group) / n)
-            latest = max(group, key=lambda r: parse_time(r['timestamp']))
-            monthly.append({
-                'timestamp': latest['timestamp'], 'players': avg,
-                'min': min(int(r.get('min', r['players'])) for r in group),
-                'max': max(int(r.get('max', r['players'])) for r in group),
-                'samples': n, 'period': 'month', 'bucket': key
-            })
-        save_json(archive_path, monthly)
+        path = ARCHIVE / f'{appid}.json'
+        existing = read_json(path, [])
+        groups = defaultdict(list)
+        for row in existing + old:
+            key = row.get('bucket') if row.get('period') == 'month' else dt(row).strftime('%Y-%m')
+            groups[key].append(row)
+        write_json(path, [weighted_aggregate(group, key, 'month') for key, group in sorted(groups.items())])
 
-    return sorted(recent + daily_result, key=lambda r: parse_time(r['timestamp']))
+    daily_rows = [weighted_aggregate(group, key, 'day') for key, group in sorted(daily.items())]
+    return sorted(recent + daily_rows, key=dt)
 
 
 def fetch(appid):
@@ -112,36 +78,19 @@ def fetch(appid):
            f'GetNumberOfCurrentPlayers/v1/?appid={appid}')
     request = urllib.request.Request(url, headers={'User-Agent': 'H1G-Steam-Players/1.0'})
     with urllib.request.urlopen(request, timeout=20) as response:
-        payload = json.load(response).get('response', {})
-    if payload.get('result') != 1:
-        raise ValueError('Steam returned unsuccessful result')
-    return int(payload['player_count'])
+        result = json.load(response).get('response', {})
+    if result.get('result') != 1 or 'player_count' not in result:
+        raise ValueError('Steam API did not return a valid player count')
+    count = int(result['player_count'])
+    if count < 0:
+        raise ValueError('Negative player count')
+    return count
 
 
 def main():
-    games = load_json(Path('games.json'), [])
-    ids = list(dict.fromkeys(int(g['appid']) for g in games))
+    games = read_json(Path('games.json'), [])
+    ids = list(dict.fromkeys(int(g['appid']) for g in games if g.get('appid')))
     if not ids:
         raise SystemExit('No AppIDs in games.json')
-    failures = []
-    for index, appid in enumerate(ids, 1):
-        try:
-            players = fetch(appid)
-            path = DATA_DIR / f'{appid}.json'
-            history = load_json(path, [])
-            history.append({'timestamp': datetime.now(UTC).isoformat(timespec='seconds'), 'players': players})
-            save_json(path, compact(appid, history))
-            print(f'[{index}/{len(ids)}] OK {appid}: {players}', flush=True)
-        except (urllib.error.URLError, TimeoutError, ValueError, KeyError, json.JSONDecodeError, OSError) as exc:
-            failures.append(appid)
-            print(f'[{index}/{len(ids)}] ERROR {appid}: {exc}', flush=True)
-        if index < len(ids):
-            time.sleep(2)
-    print(f'Completed: {len(ids)-len(failures)} OK, {len(failures)} errors', flush=True)
-    if failures:
-        print('Failed AppIDs:', failures, flush=True)
-        raise SystemExit(1)
 
-
-if __name__ == '__main__':
-    main()
+    now = datetime.now(UTC)
