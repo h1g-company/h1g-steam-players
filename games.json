@@ -1,12 +1,202 @@
 [
-  {"appid": 3841510, "wiki": "smusou2-re"},
-  {"appid": 1361350, "wiki": "doax-venusvacation"},
-  {"appid": 2860490, "wiki": ""},
-  {"appid": 4113810, "wiki": "bpsr"},
-  {"appid": 3259780, "wiki": "ffrs"},
-  {"appid": 4017880, "wiki": "anomalith"},
-  {"appid": 3159330, "wiki": "ac-shadows"},
-  {"appid": 4910440, "wiki": ""},
-  {"appid": 3259600, "wiki": "resleriana_rw"},
-  {"appid": 3123410, "wiki": "yumia"}
+  {
+    "appid": 3841510,
+    "wiki": "smusou2-re"
+  },
+  {
+    "appid": 1361350,
+    "wiki": "doax-venusvacation"
+  },
+  {
+    "appid": 2860490,
+    "wiki": ""
+  },
+  {
+    "appid": 4113810,
+    "wiki": "bpsr"
+  },
+  {
+    "appid": 3259780,
+    "wiki": "ffrs"
+  },
+  {
+    "appid": 4017880,
+    "wiki": "anomalith"
+  },
+  {
+    "appid": 3159330,
+    "wiki": "ac-shadows"
+  },
+  {
+    "appid": 4910440,
+    "wiki": ""
+  },
+  {
+    "appid": 3259600,
+    "wiki": "resleriana_rw"
+  },
+  {
+    "appid": 3123410,
+    "wiki": "yumia"
+  },
+  {
+    "appid": 1768400,
+    "wiki": "archetypearcadia"
+  },
+  {
+    "appid": 1888160,
+    "wiki": "armoredcore6"
+  },
+  {
+    "appid": 4165620,
+    "wiki": "rtype_dimensions3"
+  },
+  {
+    "appid": 1641660,
+    "wiki": "rpgolf-legends"
+  },
+  {
+    "appid": 1839510,
+    "wiki": "rpgtime"
+  },
+  {
+    "appid": 2944800,
+    "wiki": "it_was_a_human"
+  },
+  {
+    "appid": 393520,
+    "wiki": "iconoclasts"
+  },
+  {
+    "appid": 3519760,
+    "wiki": "aveclassic"
+  },
+  {
+    "appid": 2681030,
+    "wiki": "outbound"
+  },
+  {
+    "appid": 680420,
+    "wiki": "outriders"
+  },
+  {
+    "appid": 4163960,
+    "wiki": "anothereden_b"
+  },
+  {
+    "appid": 4067070,
+    "wiki": "aidame"
+  },
+  {
+    "appid": 1576130,
+    "wiki": "idoldays"
+  },
+  {
+    "appid": 821880,
+    "wiki": "idol-manager"
+  },
+  {
+    "appid": 1487470,
+    "wiki": "ginreika"
+  },
+  {
+    "appid": 333980,
+    "wiki": "akbstrip2"
+  },
+  {
+    "appid": 2515070,
+    "wiki": "aquarium"
+  },
+  {
+    "appid": 1335200,
+    "wiki": "actiontaimanin"
+  },
+  {
+    "appid": 582160,
+    "wiki": "aco"
+  },
+  {
+    "appid": 911400,
+    "wiki": "ac3"
+  },
+  {
+    "appid": 3751950,
+    "wiki": "ac_black-flag-resynced"
+  },
+  {
+    "appid": 2208920,
+    "wiki": "ac-valhalla"
+  },
+  {
+    "appid": 3035570,
+    "wiki": "ac-mirage"
+  },
+  {
+    "appid": 812140,
+    "wiki": "ac-odyssey"
+  },
+  {
+    "appid": 1201270,
+    "wiki": "aspacefortheunbound"
+  },
+  {
+    "appid": 1341820,
+    "wiki": "as-dusk-falls"
+  },
+  {
+    "appid": 3260830,
+    "wiki": "a_tiny_wander"
+  },
+  {
+    "appid": 1094820,
+    "wiki": "adabanaitan"
+  },
+  {
+    "appid": 1230140,
+    "wiki": "atri_mdm"
+  },
+  {
+    "appid": 1983970,
+    "wiki": "affogato"
+  },
+  {
+    "appid": 1952490,
+    "wiki": "alice"
+  },
+  {
+    "appid": 3274300,
+    "wiki": "awaria"
+  },
+  {
+    "appid": 401890,
+    "wiki": "arslan-musou"
+  },
+  {
+    "appid": 357190,
+    "wiki": "mvsc3"
+  },
+  {
+    "appid": 1502080,
+    "wiki": "altdeus"
+  },
+  {
+    "appid": 1322290,
+    "wiki": "arne"
+  },
+  {
+    "appid": 391540,
+    "wiki": "undertale"
+  },
+  {
+    "appid": 837470,
+    "wiki": "untitled_goose_game"
+  },
+  {
+    "appid": 1796930,
+    "wiki": "ambition_record"
+  },
+  {
+    "appid": 371140,
+    "wiki": "aegis_defenders"
+  }
 ]
