@@ -1,45 +1,5 @@
 [
   {
-    "appid": 3841510,
-    "wiki": "smusou2-re"
-  },
-  {
-    "appid": 1361350,
-    "wiki": "doax-venusvacation"
-  },
-  {
-    "appid": 2860490,
-    "wiki": ""
-  },
-  {
-    "appid": 4113810,
-    "wiki": "bpsr"
-  },
-  {
-    "appid": 3259780,
-    "wiki": "ffrs"
-  },
-  {
-    "appid": 4017880,
-    "wiki": "anomalith"
-  },
-  {
-    "appid": 3159330,
-    "wiki": "ac-shadows"
-  },
-  {
-    "appid": 4910440,
-    "wiki": ""
-  },
-  {
-    "appid": 3259600,
-    "wiki": "resleriana_rw"
-  },
-  {
-    "appid": 3123410,
-    "wiki": "yumia"
-  },
-  {
     "appid": 1768400,
     "wiki": "archetypearcadia"
   },
@@ -84,6 +44,10 @@
     "wiki": "anothereden_b"
   },
   {
+    "appid": 4017880,
+    "wiki": "anomalith"
+  },
+  {
     "appid": 4067070,
     "wiki": "aidame"
   },
@@ -110,6 +74,10 @@
   {
     "appid": 1335200,
     "wiki": "actiontaimanin"
+  },
+  {
+    "appid": 3159330,
+    "wiki": "ac-shadows"
   },
   {
     "appid": 582160,
@@ -198,5 +166,2301 @@
   {
     "appid": 371140,
     "wiki": "aegis_defenders"
+  },
+  {
+    "appid": 579180,
+    "wiki": "ys8"
+  },
+  {
+    "appid": 1351630,
+    "wiki": "ys9"
+  },
+  {
+    "appid": 2570810,
+    "wiki": "ys10"
+  },
+  {
+    "appid": 1372830,
+    "wiki": "fantasy_tavern_sexte"
+  },
+  {
+    "appid": 1461770,
+    "wiki": "fantasy_tavern_sex2"
+  },
+  {
+    "appid": 1523390,
+    "wiki": "fantasy_tavern_sex3"
+  },
+  {
+    "appid": 1100030,
+    "wiki": "kuroshinju"
+  },
+  {
+    "appid": 2799860,
+    "wiki": "inazuma_victory_road"
+  },
+  {
+    "appid": 1248870,
+    "wiki": "inuwashi"
+  },
+  {
+    "appid": 1901370,
+    "wiki": "ib"
+  },
+  {
+    "appid": 2024390,
+    "wiki": "mato_anomalies"
+  },
+  {
+    "appid": 587110,
+    "wiki": "ysc"
+  },
+  {
+    "appid": 207320,
+    "wiki": "ysf"
+  },
+  {
+    "appid": 304430,
+    "wiki": "inside"
+  },
+  {
+    "appid": 2677660,
+    "wiki": "indiana_jones"
+  },
+  {
+    "appid": 2894960,
+    "wiki": "inverted_angel"
+  },
+  {
+    "appid": 1895810,
+    "wiki": "dqdai-is"
+  },
+  {
+    "appid": 3164330,
+    "wiki": "infinitynikki"
+  },
+  {
+    "appid": 3155730,
+    "wiki": "vv_prism"
+  },
+  {
+    "appid": 1709400,
+    "wiki": "winningpost9_2022"
+  },
+  {
+    "appid": 4970830,
+    "wiki": "villion_code"
+  },
+  {
+    "appid": 588040,
+    "wiki": "will"
+  },
+  {
+    "appid": 1748660,
+    "wiki": "vocm"
+  },
+  {
+    "appid": 774241,
+    "wiki": "warhammerchaosbane"
+  },
+  {
+    "appid": 3901910,
+    "wiki": "usotsukihime"
+  },
+  {
+    "appid": 2239550,
+    "wiki": "wd_legion"
+  },
+  {
+    "appid": 3772960,
+    "wiki": "umigari"
+  },
+  {
+    "appid": 1271620,
+    "wiki": "umihara-bazooka"
+  },
+  {
+    "appid": 3204320,
+    "wiki": "welcome_to_doll_town"
+  },
+  {
+    "appid": 230410,
+    "wiki": "warframe"
+  },
+  {
+    "appid": 331870,
+    "wiki": "aer"
+  },
+  {
+    "appid": 502500,
+    "wiki": "ace7"
+  },
+  {
+    "appid": 499890,
+    "wiki": "aaero"
+  },
+  {
+    "appid": 2244210,
+    "wiki": "sao_eoa"
+  },
+  {
+    "appid": 2507620,
+    "wiki": "5hanayome2"
+  },
+  {
+    "appid": 268500,
+    "wiki": "xcom2"
+  },
+  {
+    "appid": 1152310,
+    "wiki": "escha-logy"
+  },
+  {
+    "appid": 2738050,
+    "wiki": "escalator"
+  },
+  {
+    "appid": 1953070,
+    "wiki": "rider-skr-ranbu"
+  },
+  {
+    "appid": 1175210,
+    "wiki": "projecteternalz"
+  },
+  {
+    "appid": 3125750,
+    "wiki": "edens_zero"
+  },
+  {
+    "appid": 1100430,
+    "wiki": "no-good"
+  },
+  {
+    "appid": 2392500,
+    "wiki": "ever17"
+  },
+  {
+    "appid": 1581040,
+    "wiki": "elshaddai"
+  },
+  {
+    "appid": 1245620,
+    "wiki": "eldenring"
+  },
+  {
+    "appid": 2622380,
+    "wiki": "eldenring_nr"
+  },
+  {
+    "appid": 1733840,
+    "wiki": "yurukill"
+  },
+  {
+    "appid": 1369630,
+    "wiki": "ender_lilies"
+  },
+  {
+    "appid": 898890,
+    "wiki": "endling"
+  },
+  {
+    "appid": 587620,
+    "wiki": "o-kami"
+  },
+  {
+    "appid": 2514640,
+    "wiki": "all_in_abyss"
+  },
+  {
+    "appid": 581270,
+    "wiki": "old-mans-journey"
+  },
+  {
+    "appid": 761600,
+    "wiki": "onimusha"
+  },
+  {
+    "appid": 1232460,
+    "wiki": "ane_origin"
+  },
+  {
+    "appid": 2014180,
+    "wiki": "taketourou"
+  },
+  {
+    "appid": 2357570,
+    "wiki": "ow2"
+  },
+  {
+    "appid": 921570,
+    "wiki": "octopathtraveler"
+  },
+  {
+    "appid": 3014320,
+    "wiki": "octopathtraveler0"
+  },
+  {
+    "appid": 1971650,
+    "wiki": "octopathtraveler2"
+  },
+  {
+    "appid": 2101190,
+    "wiki": "oni"
+  },
+  {
+    "appid": 969760,
+    "wiki": "omno"
+  },
+  {
+    "appid": 1130700,
+    "wiki": "avabel_online"
+  },
+  {
+    "appid": 1375400,
+    "wiki": "makaimura_return"
+  },
+  {
+    "appid": 4910440,
+    "wiki": "the_sin_phantom"
+  },
+  {
+    "appid": 2334330,
+    "wiki": "cassetteboy"
+  },
+  {
+    "appid": 818500,
+    "wiki": "colorzzle"
+  },
+  {
+    "appid": 3156040,
+    "wiki": "caloriemate_liquid"
+  },
+  {
+    "appid": 2612660,
+    "wiki": "kama3"
+  },
+  {
+    "appid": 1924810,
+    "wiki": "kamiwaza"
+  },
+  {
+    "appid": 4532500,
+    "wiki": "karia"
+  },
+  {
+    "appid": 3029540,
+    "wiki": "gbtw_ja"
+  },
+  {
+    "appid": 771340,
+    "wiki": "kansei"
+  },
+  {
+    "appid": 2537470,
+    "wiki": "vultures"
+  },
+  {
+    "appid": 2200580,
+    "wiki": "kuromanto"
+  },
+  {
+    "appid": 2322900,
+    "wiki": "gift"
+  },
+  {
+    "appid": 2928600,
+    "wiki": "hinokami2"
+  },
+  {
+    "appid": 1371720,
+    "wiki": "cardshark"
+  },
+  {
+    "appid": 2006570,
+    "wiki": "category1"
+  },
+  {
+    "appid": 1022480,
+    "wiki": "kamiko"
+  },
+  {
+    "appid": 2901310,
+    "wiki": "kiteretsu_dial"
+  },
+  {
+    "appid": 2401970,
+    "wiki": "gyakutenkenji"
+  },
+  {
+    "appid": 1688100,
+    "wiki": "cat_museum"
+  },
+  {
+    "appid": 869690,
+    "wiki": "cat_lady"
+  },
+  {
+    "appid": 3906770,
+    "wiki": "kyofutaisei"
+  },
+  {
+    "appid": 2524200,
+    "wiki": "killa"
+  },
+  {
+    "appid": 2187220,
+    "wiki": "gyakutensaiban4"
+  },
+  {
+    "appid": 520440,
+    "wiki": "ggxrdrev2"
+  },
+  {
+    "appid": 496300,
+    "wiki": "kingdom-new-lands"
+  },
+  {
+    "appid": 1084600,
+    "wiki": "sandrock"
+  },
+  {
+    "appid": 2067780,
+    "wiki": "kimigashine"
+  },
+  {
+    "appid": 914710,
+    "wiki": "catquest2"
+  },
+  {
+    "appid": 913740,
+    "wiki": "world-of-horror"
+  },
+  {
+    "appid": 2552440,
+    "wiki": "kh2-8"
+  },
+  {
+    "appid": 2552450,
+    "wiki": "kh3"
+  },
+  {
+    "appid": 2552430,
+    "wiki": "kh_bbs_fm"
+  },
+  {
+    "appid": 1284410,
+    "wiki": "gwent"
+  },
+  {
+    "appid": 1258340,
+    "wiki": "kukkorodays"
+  },
+  {
+    "appid": 1687550,
+    "wiki": "bears_restaurant"
+  },
+  {
+    "appid": 881020,
+    "wiki": "granbluefantasy_relink"
+  },
+  {
+    "appid": 956030,
+    "wiki": "creaks"
+  },
+  {
+    "appid": 606880,
+    "wiki": "greedfall"
+  },
+  {
+    "appid": 1079830,
+    "wiki": "cris-tales"
+  },
+  {
+    "appid": 599140,
+    "wiki": "graveyard_keeper"
+  },
+  {
+    "appid": 3321460,
+    "wiki": "crimsondesert"
+  },
+  {
+    "appid": 3259600,
+    "wiki": "resleriana_rw"
+  },
+  {
+    "appid": 1608070,
+    "wiki": "ccffvii_reunion"
+  },
+  {
+    "appid": 2258500,
+    "wiki": "crymachina"
+  },
+  {
+    "appid": 981750,
+    "wiki": "crystar"
+  },
+  {
+    "appid": 1814930,
+    "wiki": "kurokami_bansan"
+  },
+  {
+    "appid": 726950,
+    "wiki": "black-rose-valkyrie"
+  },
+  {
+    "appid": 1323470,
+    "wiki": "getsufumaden"
+  },
+  {
+    "appid": 2167430,
+    "wiki": "gunneko"
+  },
+  {
+    "appid": 2698470,
+    "wiki": "kemonoteatime"
+  },
+  {
+    "appid": 3668850,
+    "wiki": "star_leap"
+  },
+  {
+    "appid": 1932640,
+    "wiki": "suikoden1_rem"
+  },
+  {
+    "appid": 2064650,
+    "wiki": "toweroffantasy"
+  },
+  {
+    "appid": 1514380,
+    "wiki": "cogen"
+  },
+  {
+    "appid": 2362060,
+    "wiki": "cv2"
+  },
+  {
+    "appid": 1967430,
+    "wiki": "ghosttrick"
+  },
+  {
+    "appid": 265930,
+    "wiki": "goat-simulator"
+  },
+  {
+    "appid": 914800,
+    "wiki": "coffee_talk"
+  },
+  {
+    "appid": 1663220,
+    "wiki": "ctep2"
+  },
+  {
+    "appid": 3161220,
+    "wiki": "coffee_talk_tokyo"
+  },
+  {
+    "appid": 1938090,
+    "wiki": "cod_blackops6"
+  },
+  {
+    "appid": 393080,
+    "wiki": "cod_mwr"
+  },
+  {
+    "appid": 1220890,
+    "wiki": "ghone_is_gone"
+  },
+  {
+    "appid": 2857880,
+    "wiki": "yakuza_rogue2"
+  },
+  {
+    "appid": 1234030,
+    "wiki": "gothicmurder"
+  },
+  {
+    "appid": 2507610,
+    "wiki": "5hanayome"
+  },
+  {
+    "appid": 1053390,
+    "wiki": "kowloon_ps2"
+  },
+  {
+    "appid": 889600,
+    "wiki": "caligula_od"
+  },
+  {
+    "appid": 1933740,
+    "wiki": "caligula2"
+  },
+  {
+    "appid": 1133760,
+    "wiki": "cc_rd"
+  },
+  {
+    "appid": 842910,
+    "wiki": "missing"
+  },
+  {
+    "appid": 990630,
+    "wiki": "thelastcampfire"
+  },
+  {
+    "appid": 378540,
+    "wiki": "thesurge"
+  },
+  {
+    "appid": 1222670,
+    "wiki": "the-sims-4"
+  },
+  {
+    "appid": 2288070,
+    "wiki": "tnwoa"
+  },
+  {
+    "appid": 1091500,
+    "wiki": "cyberpunk"
+  },
+  {
+    "appid": 2947440,
+    "wiki": "silenthill-f"
+  },
+  {
+    "appid": 2085000,
+    "wiki": "saga_eb"
+  },
+  {
+    "appid": 1295270,
+    "wiki": "saga_frontier_re"
+  },
+  {
+    "appid": 2452080,
+    "wiki": "sf2r"
+  },
+  {
+    "appid": 2507560,
+    "wiki": "zatsuonkeiboymeetsgirl"
+  },
+  {
+    "appid": 1062340,
+    "wiki": "katanakami"
+  },
+  {
+    "appid": 1619230,
+    "wiki": "eos"
+  },
+  {
+    "appid": 695330,
+    "wiki": "season"
+  },
+  {
+    "appid": 1262350,
+    "wiki": "signalis"
+  },
+  {
+    "appid": 809890,
+    "wiki": "shining_resonance"
+  },
+  {
+    "appid": 1116580,
+    "wiki": "shady-part-of-me"
+  },
+  {
+    "appid": 981770,
+    "wiki": "shinobi_refle"
+  },
+  {
+    "appid": 750920,
+    "wiki": "shadow_tombraider"
+  },
+  {
+    "appid": 517630,
+    "wiki": "just_cause4"
+  },
+  {
+    "appid": 1152320,
+    "wiki": "shallie"
+  },
+  {
+    "appid": 1798750,
+    "wiki": "13th_month"
+  },
+  {
+    "appid": 3216500,
+    "wiki": "shuten_kyodan"
+  },
+  {
+    "appid": 4182030,
+    "wiki": "jyukai_meiro"
+  },
+  {
+    "appid": 970560,
+    "wiki": "steinsgate_darling"
+  },
+  {
+    "appid": 819030,
+    "wiki": "steinsgate_elite"
+  },
+  {
+    "appid": 930910,
+    "wiki": "steinsgate_phenogram"
+  },
+  {
+    "appid": 4012810,
+    "wiki": "steinsgate_reboot"
+  },
+  {
+    "appid": 2403290,
+    "wiki": "boyhoods_end"
+  },
+  {
+    "appid": 2058180,
+    "wiki": "judgeeyes"
+  },
+  {
+    "appid": 1122100,
+    "wiki": "giraffeandannika"
+  },
+  {
+    "appid": 601050,
+    "wiki": "shingeki2"
+  },
+  {
+    "appid": 2916700,
+    "wiki": "shingeki3"
+  },
+  {
+    "appid": 2384580,
+    "wiki": "smusou_origins"
+  },
+  {
+    "appid": 3841510,
+    "wiki": "smusou2-re"
+  },
+  {
+    "appid": 3360010,
+    "wiki": "jintsuku"
+  },
+  {
+    "appid": 2124490,
+    "wiki": "silenthill2"
+  },
+  {
+    "appid": 2450430,
+    "wiki": "saganatsu"
+  },
+  {
+    "appid": 1340480,
+    "wiki": "tcws"
+  },
+  {
+    "appid": 644830,
+    "wiki": "thesurge2"
+  },
+  {
+    "appid": 1103730,
+    "wiki": "samurai-force-shing"
+  },
+  {
+    "appid": 1952250,
+    "wiki": "s_maiden"
+  },
+  {
+    "appid": 893850,
+    "wiki": "the-longing"
+  },
+  {
+    "appid": 1093290,
+    "wiki": "the_wild_at_heart"
+  },
+  {
+    "appid": 878670,
+    "wiki": "shenmue3"
+  },
+  {
+    "appid": 914720,
+    "wiki": "shikiyoku"
+  },
+  {
+    "appid": 1033640,
+    "wiki": "synaptic-drive"
+  },
+  {
+    "appid": 985080,
+    "wiki": "food-girls"
+  },
+  {
+    "appid": 322520,
+    "wiki": "smusou7e"
+  },
+  {
+    "appid": 968790,
+    "wiki": "smusou6"
+  },
+  {
+    "appid": 3751230,
+    "wiki": "danganronpa_2x2"
+  },
+  {
+    "appid": 1913740,
+    "wiki": "bomberman_r2"
+  },
+  {
+    "appid": 898750,
+    "wiki": "srw30"
+  },
+  {
+    "appid": 1031500,
+    "wiki": "srwv"
+  },
+  {
+    "appid": 1031510,
+    "wiki": "srwx"
+  },
+  {
+    "appid": 1909950,
+    "wiki": "suparobo_y"
+  },
+  {
+    "appid": 775500,
+    "wiki": "snx"
+  },
+  {
+    "appid": 1009450,
+    "wiki": "sankakurena"
+  },
+  {
+    "appid": 1519710,
+    "wiki": "schim"
+  },
+  {
+    "appid": 2280000,
+    "wiki": "portopia_ai"
+  },
+  {
+    "appid": 1172380,
+    "wiki": "jedi-fallen-order"
+  },
+  {
+    "appid": 1222730,
+    "wiki": "starwars-squadrons"
+  },
+  {
+    "appid": 609150,
+    "wiki": "so4"
+  },
+  {
+    "appid": 1776380,
+    "wiki": "so6"
+  },
+  {
+    "appid": 1691340,
+    "wiki": "steel_hunters"
+  },
+  {
+    "appid": 3489700,
+    "wiki": "stellar-blade"
+  },
+  {
+    "appid": 1624540,
+    "wiki": "storyteller"
+  },
+  {
+    "appid": 252410,
+    "wiki": "steam_world_dig"
+  },
+  {
+    "appid": 1335230,
+    "wiki": "sumire"
+  },
+  {
+    "appid": 1364780,
+    "wiki": "street_fighter6"
+  },
+  {
+    "appid": 209120,
+    "wiki": "sfxtk"
+  },
+  {
+    "appid": 1358700,
+    "wiki": "sop_ffo"
+  },
+  {
+    "appid": 4260840,
+    "wiki": "stranger-than-heaven"
+  },
+  {
+    "appid": 2176930,
+    "wiki": "trinity-trigger"
+  },
+  {
+    "appid": 1175830,
+    "wiki": "seiken_lom"
+  },
+  {
+    "appid": 4895250,
+    "wiki": "stellaraffinity"
+  },
+  {
+    "appid": 1810820,
+    "wiki": "sekaiju_3"
+  },
+  {
+    "appid": 1868170,
+    "wiki": "sekaiju_2"
+  },
+  {
+    "appid": 1868180,
+    "wiki": "sekaiju_1"
+  },
+  {
+    "appid": 555950,
+    "wiki": "zetsubou"
+  },
+  {
+    "appid": 1859280,
+    "wiki": "7days"
+  },
+  {
+    "appid": 2130460,
+    "wiki": "zero_tukihami"
+  },
+  {
+    "appid": 1732190,
+    "wiki": "zero_nure"
+  },
+  {
+    "appid": 1060210,
+    "wiki": "zettai-zetsumei4"
+  },
+  {
+    "appid": 552590,
+    "wiki": "sexy_brutale"
+  },
+  {
+    "appid": 4162040,
+    "wiki": "zenless"
+  },
+  {
+    "appid": 595740,
+    "wiki": "sanadamaru"
+  },
+  {
+    "appid": 348470,
+    "wiki": "sengoku4_2"
+  },
+  {
+    "appid": 790820,
+    "wiki": "valkyria4"
+  },
+  {
+    "appid": 3081320,
+    "wiki": "fuga3"
+  },
+  {
+    "appid": 3696410,
+    "wiki": "zmg"
+  },
+  {
+    "appid": 294860,
+    "wiki": "valkyria"
+  },
+  {
+    "appid": 477740,
+    "wiki": "zendesu"
+  },
+  {
+    "appid": 2346580,
+    "wiki": "sentimentaldeathloop"
+  },
+  {
+    "appid": 1222060,
+    "wiki": "shogi_senri"
+  },
+  {
+    "appid": 626690,
+    "wiki": "sao_fb"
+  },
+  {
+    "appid": 1858630,
+    "wiki": "saofd"
+  },
+  {
+    "appid": 2237740,
+    "wiki": "soul_covenant"
+  },
+  {
+    "appid": 1933990,
+    "wiki": "burger"
+  },
+  {
+    "appid": 1777620,
+    "wiki": "soulhackers2"
+  },
+  {
+    "appid": 584400,
+    "wiki": "sonicmania"
+  },
+  {
+    "appid": 3326660,
+    "wiki": "sofia"
+  },
+  {
+    "appid": 1502970,
+    "wiki": "sophie"
+  },
+  {
+    "appid": 3375780,
+    "wiki": "sora-1st"
+  },
+  {
+    "appid": 4225980,
+    "wiki": "sora-2nd"
+  },
+  {
+    "appid": 694280,
+    "wiki": "zombiearmy4"
+  },
+  {
+    "appid": 311240,
+    "wiki": "zeroescape"
+  },
+  {
+    "appid": 1808680,
+    "wiki": "snufkin"
+  },
+  {
+    "appid": 1851280,
+    "wiki": "samurai-bringer"
+  },
+  {
+    "appid": 1621310,
+    "wiki": "sophie2"
+  },
+  {
+    "appid": 1341200,
+    "wiki": "smusou8e"
+  },
+  {
+    "appid": 730310,
+    "wiki": "smusou8"
+  },
+  {
+    "appid": 1716740,
+    "wiki": "starfield"
+  },
+  {
+    "appid": 2363180,
+    "wiki": "darkauction"
+  },
+  {
+    "appid": 462780,
+    "wiki": "darksiders"
+  },
+  {
+    "appid": 710920,
+    "wiki": "darksiders-genesis"
+  },
+  {
+    "appid": 606280,
+    "wiki": "darksiders-iii"
+  },
+  {
+    "appid": 1150950,
+    "wiki": "timelie"
+  },
+  {
+    "appid": 2454960,
+    "wiki": "villainess"
+  },
+  {
+    "appid": 1158850,
+    "wiki": "dai-gyakuten"
+  },
+  {
+    "appid": 861540,
+    "wiki": "dicey_dungeons"
+  },
+  {
+    "appid": 1107300,
+    "wiki": "downinbermuda"
+  },
+  {
+    "appid": 1015890,
+    "wiki": "tasomachi"
+  },
+  {
+    "appid": 3141520,
+    "wiki": "galleria"
+  },
+  {
+    "appid": 2752180,
+    "wiki": "datekaname"
+  },
+  {
+    "appid": 1602540,
+    "wiki": "sophia-the-traveler"
+  },
+  {
+    "appid": 3577000,
+    "wiki": "danzaishitsu"
+  },
+  {
+    "appid": 2380230,
+    "wiki": "jyusou_on"
+  },
+  {
+    "appid": 2972730,
+    "wiki": "jyusou_gakkou"
+  },
+  {
+    "appid": 785260,
+    "wiki": "teamsonicracing"
+  },
+  {
+    "appid": 574200,
+    "wiki": "edf4_1_wds"
+  },
+  {
+    "appid": 2185060,
+    "wiki": "tp_museum"
+  },
+  {
+    "appid": 220440,
+    "wiki": "dmc"
+  },
+  {
+    "appid": 329050,
+    "wiki": "dmc4"
+  },
+  {
+    "appid": 601150,
+    "wiki": "dmc5"
+  },
+  {
+    "appid": 384630,
+    "wiki": "aviary-attorney"
+  },
+  {
+    "appid": 1868140,
+    "wiki": "dave_diver"
+  },
+  {
+    "appid": 1522160,
+    "wiki": "epic-mickey"
+  },
+  {
+    "appid": 738540,
+    "wiki": "tov_ps3"
+  },
+  {
+    "appid": 2246670,
+    "wiki": "tox"
+  },
+  {
+    "appid": 3470960,
+    "wiki": "toe"
+  },
+  {
+    "appid": 2530980,
+    "wiki": "tog_f"
+  },
+  {
+    "appid": 2331020,
+    "wiki": "tob"
+  },
+  {
+    "appid": 1321070,
+    "wiki": "deathcometrue"
+  },
+  {
+    "appid": 3907190,
+    "wiki": "duskindexgion"
+  },
+  {
+    "appid": 911220,
+    "wiki": "duskdiver"
+  },
+  {
+    "appid": 2307070,
+    "wiki": "kibukawa_shisha"
+  },
+  {
+    "appid": 2307060,
+    "wiki": "kibukawa_kairoukan"
+  },
+  {
+    "appid": 2307050,
+    "wiki": "kibukawa_kamengensou"
+  },
+  {
+    "appid": 1187940,
+    "wiki": "danmachi_ic"
+  },
+  {
+    "appid": 3054820,
+    "wiki": "devil_connection"
+  },
+  {
+    "appid": 1984270,
+    "wiki": "digimonstory-ts"
+  },
+  {
+    "appid": 2213190,
+    "wiki": "dn-kw"
+  },
+  {
+    "appid": 1265570,
+    "wiki": "dmlc"
+  },
+  {
+    "appid": 389730,
+    "wiki": "tekken7"
+  },
+  {
+    "appid": 838380,
+    "wiki": "doa6"
+  },
+  {
+    "appid": 1361350,
+    "wiki": "doax-venusvacation"
+  },
+  {
+    "appid": 1222140,
+    "wiki": "detroit-become-human"
+  },
+  {
+    "appid": 1671210,
+    "wiki": "deltarune"
+  },
+  {
+    "appid": 1356670,
+    "wiki": "sakuna"
+  },
+  {
+    "appid": 1888430,
+    "wiki": "10_minutes"
+  },
+  {
+    "appid": 3975530,
+    "wiki": "toganeyobi"
+  },
+  {
+    "appid": 1839430,
+    "wiki": "dolls_nest"
+  },
+  {
+    "appid": 981890,
+    "wiki": "tokyo2020_game"
+  },
+  {
+    "appid": 687260,
+    "wiki": "tokyodark"
+  },
+  {
+    "appid": 1191260,
+    "wiki": "touken-musou"
+  },
+  {
+    "appid": 3265060,
+    "wiki": "touhou_dystopian"
+  },
+  {
+    "appid": 3639520,
+    "wiki": "togainu_ps2"
+  },
+  {
+    "appid": 3907240,
+    "wiki": "girlsfrontline"
+  },
+  {
+    "appid": 698780,
+    "wiki": "ddlc_jp"
+  },
+  {
+    "appid": 2089600,
+    "wiki": "umdc"
+  },
+  {
+    "appid": 936180,
+    "wiki": "totori_dx"
+  },
+  {
+    "appid": 2376580,
+    "wiki": "tribe_nine"
+  },
+  {
+    "appid": 965230,
+    "wiki": "dora_boku"
+  },
+  {
+    "appid": 1492730,
+    "wiki": "dora_boku2"
+  },
+  {
+    "appid": 2893570,
+    "wiki": "dq1_hd"
+  },
+  {
+    "appid": 2499860,
+    "wiki": "dq7r"
+  },
+  {
+    "appid": 2701660,
+    "wiki": "dq3_hd"
+  },
+  {
+    "appid": 1358750,
+    "wiki": "dq10_offline"
+  },
+  {
+    "appid": 1295510,
+    "wiki": "dq11s"
+  },
+  {
+    "appid": 2021210,
+    "wiki": "dq_treasures"
+  },
+  {
+    "appid": 2436570,
+    "wiki": "dq_builders"
+  },
+  {
+    "appid": 1072420,
+    "wiki": "dq_builders2"
+  },
+  {
+    "appid": 2175540,
+    "wiki": "dqm3"
+  },
+  {
+    "appid": 3681610,
+    "wiki": "dqm4"
+  },
+  {
+    "appid": 1790600,
+    "wiki": "dbsz"
+  },
+  {
+    "appid": 851850,
+    "wiki": "dbar"
+  },
+  {
+    "appid": 2072560,
+    "wiki": "dbg-squadra"
+  },
+  {
+    "appid": 1276760,
+    "wiki": "db_thebreakers"
+  },
+  {
+    "appid": 454650,
+    "wiki": "dbx2"
+  },
+  {
+    "appid": 375900,
+    "wiki": "trackmania-turbo"
+  },
+  {
+    "appid": 3103780,
+    "wiki": "drapline"
+  },
+  {
+    "appid": 1171270,
+    "wiki": "troubledays"
+  },
+  {
+    "appid": 2244150,
+    "wiki": "tristia_restore"
+  },
+  {
+    "appid": 2244160,
+    "wiki": "tristia_legacy"
+  },
+  {
+    "appid": 1370050,
+    "wiki": "trektoyomi"
+  },
+  {
+    "appid": 2871140,
+    "wiki": "the_real_face_of_a_vtuber"
+  },
+  {
+    "appid": 1360550,
+    "wiki": "summertime-madness"
+  },
+  {
+    "appid": 3344960,
+    "wiki": "natsume_haduki"
+  },
+  {
+    "appid": 3679080,
+    "wiki": "7origin"
+  },
+  {
+    "appid": 2050710,
+    "wiki": "narin_the_orange_room"
+  },
+  {
+    "appid": 4485940,
+    "wiki": "nandomekanoshiki"
+  },
+  {
+    "appid": 524220,
+    "wiki": "nierautomata"
+  },
+  {
+    "appid": 1451940,
+    "wiki": "needy_girl_overdose"
+  },
+  {
+    "appid": 3215170,
+    "wiki": "ngo_typing"
+  },
+  {
+    "appid": 485510,
+    "wiki": "nioh"
+  },
+  {
+    "appid": 798460,
+    "wiki": "ninokuni_ps3"
+  },
+  {
+    "appid": 3809110,
+    "wiki": "jsp"
+  },
+  {
+    "appid": 4193270,
+    "wiki": "jsp2"
+  },
+  {
+    "appid": 4611990,
+    "wiki": "jsp3"
+  },
+  {
+    "appid": 738530,
+    "wiki": "gundam_breaker"
+  },
+  {
+    "appid": 1777750,
+    "wiki": "sayou"
+  },
+  {
+    "appid": 2627260,
+    "wiki": "ninja_gaiden4"
+  },
+  {
+    "appid": 1075980,
+    "wiki": "ninnindays"
+  },
+  {
+    "appid": 1698030,
+    "wiki": "ninnindays2"
+  },
+  {
+    "appid": 602520,
+    "wiki": "nekopara_vol_3"
+  },
+  {
+    "appid": 333600,
+    "wiki": "nekopara_vol_1"
+  },
+  {
+    "appid": 969700,
+    "wiki": "nekomiko"
+  },
+  {
+    "appid": 886820,
+    "wiki": "nelke"
+  },
+  {
+    "appid": 1744330,
+    "wiki": "nmh3"
+  },
+  {
+    "appid": 1885130,
+    "wiki": "nozokimi"
+  },
+  {
+    "appid": 1816300,
+    "wiki": "harvestella"
+  },
+  {
+    "appid": 7670,
+    "wiki": "bioshock"
+  },
+  {
+    "appid": 254700,
+    "wiki": "biohazard4"
+  },
+  {
+    "appid": 21690,
+    "wiki": "biohazard5"
+  },
+  {
+    "appid": 418370,
+    "wiki": "biohazard7"
+  },
+  {
+    "appid": 3764200,
+    "wiki": "bio_requiem"
+  },
+  {
+    "appid": 2680380,
+    "wiki": "hyke-northernlights"
+  },
+  {
+    "appid": 1523400,
+    "wiki": "haishin"
+  },
+  {
+    "appid": 2278630,
+    "wiki": "haishin2"
+  },
+  {
+    "appid": 1082710,
+    "wiki": "bug-fables"
+  },
+  {
+    "appid": 2162720,
+    "wiki": "hakoboku"
+  },
+  {
+    "appid": 2768900,
+    "wiki": "hachi"
+  },
+  {
+    "appid": 2653790,
+    "wiki": "the_exit_8"
+  },
+  {
+    "appid": 2903560,
+    "wiki": "the_platform_8"
+  },
+  {
+    "appid": 1764390,
+    "wiki": "bad_end_theater"
+  },
+  {
+    "appid": 1761390,
+    "wiki": "miku_mega39s"
+  },
+  {
+    "appid": 1691970,
+    "wiki": "danganronpa_s"
+  },
+  {
+    "appid": 2089500,
+    "wiki": "hatena_ttoc"
+  },
+  {
+    "appid": 3197720,
+    "wiki": "hanakare"
+  },
+  {
+    "appid": 1238810,
+    "wiki": "bf5"
+  },
+  {
+    "appid": 2654470,
+    "wiki": "bunnygarden"
+  },
+  {
+    "appid": 3443820,
+    "wiki": "bunnygarden2"
+  },
+  {
+    "appid": 1287030,
+    "wiki": "bb4f"
+  },
+  {
+    "appid": 444090,
+    "wiki": "paladins"
+  },
+  {
+    "appid": 2701440,
+    "wiki": "paranormasight_38"
+  },
+  {
+    "appid": 2106840,
+    "wiki": "paranormasight"
+  },
+  {
+    "appid": 447530,
+    "wiki": "va11halla"
+  },
+  {
+    "appid": 1623730,
+    "wiki": "palworld"
+  },
+  {
+    "appid": 1612780,
+    "wiki": "retrotica"
+  },
+  {
+    "appid": 1163590,
+    "wiki": "bulletgirls_p"
+  },
+  {
+    "appid": 696180,
+    "wiki": "bulletwitch"
+  },
+  {
+    "appid": 2495100,
+    "wiki": "hellokittyislandadv"
+  },
+  {
+    "appid": 2456420,
+    "wiki": "hunterhunter_ni"
+  },
+  {
+    "appid": 562410,
+    "wiki": "panty_party"
+  },
+  {
+    "appid": 266510,
+    "wiki": "hof1"
+  },
+  {
+    "appid": 456670,
+    "wiki": "hof2"
+  },
+  {
+    "appid": 3014080,
+    "wiki": "hundred_line"
+  },
+  {
+    "appid": 1074080,
+    "wiki": "peach_kagura"
+  },
+  {
+    "appid": 578080,
+    "wiki": "pubg"
+  },
+  {
+    "appid": 850000,
+    "wiki": "noel"
+  },
+  {
+    "appid": 3134280,
+    "wiki": "piczlerunefactory"
+  },
+  {
+    "appid": 2349030,
+    "wiki": "bpro_game"
+  },
+  {
+    "appid": 1634150,
+    "wiki": "behind-the-frame"
+  },
+  {
+    "appid": 512180,
+    "wiki": "hyakka"
+  },
+  {
+    "appid": 1658280,
+    "wiki": "100eiyuden"
+  },
+  {
+    "appid": 1658290,
+    "wiki": "100rising"
+  },
+  {
+    "appid": 2246130,
+    "wiki": "kamotan"
+  },
+  {
+    "appid": 312750,
+    "wiki": "ff4_ds"
+  },
+  {
+    "appid": 3837340,
+    "wiki": "ff7_international"
+  },
+  {
+    "appid": 2909400,
+    "wiki": "ffvii_rebirth"
+  },
+  {
+    "appid": 1462040,
+    "wiki": "ff7_remake"
+  },
+  {
+    "appid": 377840,
+    "wiki": "ff9"
+  },
+  {
+    "appid": 595520,
+    "wiki": "ff12_tza"
+  },
+  {
+    "appid": 292140,
+    "wiki": "ff13-2"
+  },
+  {
+    "appid": 637650,
+    "wiki": "ff15"
+  },
+  {
+    "appid": 39210,
+    "wiki": "ff_xiv"
+  },
+  {
+    "appid": 2515020,
+    "wiki": "ff16"
+  },
+  {
+    "appid": 1004640,
+    "wiki": "fft_tic"
+  },
+  {
+    "appid": 359870,
+    "wiki": "ff10"
+  },
+  {
+    "appid": 340170,
+    "wiki": "ff0"
+  },
+  {
+    "appid": 3259780,
+    "wiki": "ffrs"
+  },
+  {
+    "appid": 552520,
+    "wiki": "farcry5"
+  },
+  {
+    "appid": 2844850,
+    "wiki": "fantasian"
+  },
+  {
+    "appid": 2993780,
+    "wiki": "fli"
+  },
+  {
+    "appid": 3165210,
+    "wiki": "vtuber_typing"
+  },
+  {
+    "appid": 1770830,
+    "wiki": "ramie"
+  },
+  {
+    "appid": 1781030,
+    "wiki": "fishingparadise"
+  },
+  {
+    "appid": 511680,
+    "wiki": "fate-extella"
+  },
+  {
+    "appid": 2396980,
+    "wiki": "fatevita"
+  },
+  {
+    "appid": 501300,
+    "wiki": "edithfinch"
+  },
+  {
+    "appid": 527290,
+    "wiki": "firis"
+  },
+  {
+    "appid": 2470300,
+    "wiki": "hookah_haze"
+  },
+  {
+    "appid": 304390,
+    "wiki": "forhonor"
+  },
+  {
+    "appid": 1151340,
+    "wiki": "fallout76"
+  },
+  {
+    "appid": 1259790,
+    "wiki": "puyopuyotetris2"
+  },
+  {
+    "appid": 3357650,
+    "wiki": "pragmata"
+  },
+  {
+    "appid": 2442230,
+    "wiki": "browndust"
+  },
+  {
+    "appid": 1257360,
+    "wiki": "bloodstained2"
+  },
+  {
+    "appid": 3211430,
+    "wiki": "brigandine-abyss"
+  },
+  {
+    "appid": 1151740,
+    "wiki": "prisonprincess"
+  },
+  {
+    "appid": 4073960,
+    "wiki": "bpsr"
+  },
+  {
+    "appid": 1423600,
+    "wiki": "bluereflection-tie"
+  },
+  {
+    "appid": 322450,
+    "wiki": "framed_collection"
+  },
+  {
+    "appid": 208670,
+    "wiki": "blades_of_time"
+  },
+  {
+    "appid": 1102130,
+    "wiki": "florence"
+  },
+  {
+    "appid": 3575730,
+    "wiki": "merrybunnygaren"
+  },
+  {
+    "appid": 1289310,
+    "wiki": "helltaker"
+  },
+  {
+    "appid": 752590,
+    "wiki": "aplaguetale"
+  },
+  {
+    "appid": 1025960,
+    "wiki": "buried_stars"
+  },
+  {
+    "appid": 3061570,
+    "wiki": "p5x"
+  },
+  {
+    "appid": 2161700,
+    "wiki": "p3r"
+  },
+  {
+    "appid": 1113000,
+    "wiki": "p4g"
+  },
+  {
+    "appid": 2963950,
+    "wiki": "p4re"
+  },
+  {
+    "appid": 1687950,
+    "wiki": "p5r"
+  },
+  {
+    "appid": 1382330,
+    "wiki": "p5s"
+  },
+  {
+    "appid": 2254740,
+    "wiki": "p5t"
+  },
+  {
+    "appid": 2004680,
+    "wiki": "voidlingbound"
+  },
+  {
+    "appid": 3483510,
+    "wiki": "el1000"
+  },
+  {
+    "appid": 397540,
+    "wiki": "borderlands3"
+  },
+  {
+    "appid": 261640,
+    "wiki": "borderlands_p-s"
+  },
+  {
+    "appid": 2111170,
+    "wiki": "bokumono_welcome"
+  },
+  {
+    "appid": 978780,
+    "wiki": "bokumono_saikai"
+  },
+  {
+    "appid": 2508780,
+    "wiki": "bokumono_grabaza"
+  },
+  {
+    "appid": 1058450,
+    "wiki": "mhaoj2"
+  },
+  {
+    "appid": 869870,
+    "wiki": "girlfriend-mermaid"
+  },
+  {
+    "appid": 2362050,
+    "wiki": "heroaca_aj"
+  },
+  {
+    "appid": 2162950,
+    "wiki": "hoshitootome"
+  },
+  {
+    "appid": 968350,
+    "wiki": "hotel_sowls"
+  },
+  {
+    "appid": 1151640,
+    "wiki": "horizon"
+  },
+  {
+    "appid": 367520,
+    "wiki": "hollowknight"
+  },
+  {
+    "appid": 233290,
+    "wiki": "murdered"
+  },
+  {
+    "appid": 1951150,
+    "wiki": "maimaimaigoen"
+  },
+  {
+    "appid": 1672970,
+    "wiki": "mc-dungeons"
+  },
+  {
+    "appid": 1928870,
+    "wiki": "minecraft-legends"
+  },
+  {
+    "appid": 3562120,
+    "wiki": "magical_princess"
+  },
+  {
+    "appid": 1817190,
+    "wiki": "spider-man_mm"
+  },
+  {
+    "appid": 2102040,
+    "wiki": "mylittlepuppy"
+  },
+  {
+    "appid": 3548040,
+    "wiki": "machine_child"
+  },
+  {
+    "appid": 885810,
+    "wiki": "the-witchs-house-mv"
+  },
+  {
+    "appid": 3802800,
+    "wiki": "madomonogatari"
+  },
+  {
+    "appid": 2239130,
+    "wiki": "reviver"
+  },
+  {
+    "appid": 360430,
+    "wiki": "mafia3"
+  },
+  {
+    "appid": 802880,
+    "wiki": "muvluv"
+  },
+  {
+    "appid": 802890,
+    "wiki": "muvluv_o"
+  },
+  {
+    "appid": 3101040,
+    "wiki": "manosaba"
+  },
+  {
+    "appid": 2052410,
+    "wiki": "mahoyo"
+  },
+  {
+    "appid": 1497950,
+    "wiki": "edfwb"
+  },
+  {
+    "appid": 769560,
+    "wiki": "full_moon"
+  },
+  {
+    "appid": 914750,
+    "wiki": "beesimulator"
+  },
+  {
+    "appid": 940910,
+    "wiki": "minoria"
+  },
+  {
+    "appid": 1392820,
+    "wiki": "milk1"
+  },
+  {
+    "appid": 1604000,
+    "wiki": "milk2"
+  },
+  {
+    "appid": 2730810,
+    "wiki": "mingol-world"
+  },
+  {
+    "appid": 2277560,
+    "wiki": "wuchang_fallen_feathers"
+  },
+  {
+    "appid": 831560,
+    "wiki": "orochi3"
+  },
+  {
+    "appid": 3178350,
+    "wiki": "musou_abyss"
+  },
+  {
+    "appid": 610190,
+    "wiki": "musou_stars"
+  },
+  {
+    "appid": 3256150,
+    "wiki": "moomintroll"
+  },
+  {
+    "appid": 1714580,
+    "wiki": "moon"
+  },
+  {
+    "appid": 606150,
+    "wiki": "moonlighter"
+  },
+  {
+    "appid": 4578810,
+    "wiki": "makedrama"
+  },
+  {
+    "appid": 2191490,
+    "wiki": "pokegaku3"
+  },
+  {
+    "appid": 2679460,
+    "wiki": "metaphor_refantazio"
+  },
+  {
+    "appid": 311340,
+    "wiki": "mgs5_gz"
+  },
+  {
+    "appid": 287700,
+    "wiki": "mgs5_tpp"
+  },
+  {
+    "appid": 2492660,
+    "wiki": "mgspw"
+  },
+  {
+    "appid": 1036740,
+    "wiki": "mdogs"
+  },
+  {
+    "appid": 2334170,
+    "wiki": "metal_bringer"
+  },
+  {
+    "appid": 286690,
+    "wiki": "metro-2033"
+  },
+  {
+    "appid": 1173200,
+    "wiki": "metal-unit"
+  },
+  {
+    "appid": 416790,
+    "wiki": "metronomicon"
+  },
+  {
+    "appid": 738510,
+    "wiki": "memoriesoff_if"
+  },
+  {
+    "appid": 2184590,
+    "wiki": "memories_off_yubikiri"
+  },
+  {
+    "appid": 976310,
+    "wiki": "mortal_kombat_11"
+  },
+  {
+    "appid": 2343610,
+    "wiki": "mojiyugi"
+  },
+  {
+    "appid": 1277400,
+    "wiki": "mh-stories2"
+  },
+  {
+    "appid": 2852190,
+    "wiki": "mhstories3"
+  },
+  {
+    "appid": 2246340,
+    "wiki": "mh_wilds"
+  },
+  {
+    "appid": 1150640,
+    "wiki": "yugioh_lotd"
+  },
+  {
+    "appid": 1179060,
+    "wiki": "yuyoku-f"
+  },
+  {
+    "appid": 3123410,
+    "wiki": "yumia"
+  },
+  {
+    "appid": 1570510,
+    "wiki": "yomibana"
+  },
+  {
+    "appid": 4027640,
+    "wiki": "warashi"
+  },
+  {
+    "appid": 1058140,
+    "wiki": "yuremaster"
+  },
+  {
+    "appid": 2914150,
+    "wiki": "yunyun_syndrome"
+  },
+  {
+    "appid": 648590,
+    "wiki": "428_wiki"
+  },
+  {
+    "appid": 1297530,
+    "wiki": "liar_trick"
+  },
+  {
+    "appid": 1121560,
+    "wiki": "ryza"
+  },
+  {
+    "appid": 1257290,
+    "wiki": "ryza2"
+  },
+  {
+    "appid": 1999770,
+    "wiki": "ryza3"
+  },
+  {
+    "appid": 1627720,
+    "wiki": "liesofp"
+  },
+  {
+    "appid": 2288350,
+    "wiki": "raidou"
+  },
+  {
+    "appid": 2014380,
+    "wiki": "lal"
+  },
+  {
+    "appid": 2129530,
+    "wiki": "reanimal"
+  },
+  {
+    "appid": 252110,
+    "wiki": "lovers_ids"
+  },
+  {
+    "appid": 1060220,
+    "wiki": "langrisser-1_2"
+  },
+  {
+    "appid": 1499540,
+    "wiki": "real_time_shogi"
+  },
+  {
+    "appid": 1013750,
+    "wiki": "legaldungeon"
+  },
+  {
+    "appid": 1293910,
+    "wiki": "neurodiver"
+  },
+  {
+    "appid": 1846270,
+    "wiki": "requartz"
+  },
+  {
+    "appid": 1277510,
+    "wiki": "re-zero-king"
+  },
+  {
+    "appid": 638970,
+    "wiki": "ryu-ga-gotoku_zero"
+  },
+  {
+    "appid": 3937550,
+    "wiki": "kiwami3"
+  },
+  {
+    "appid": 1388590,
+    "wiki": "ryu-ga-gotoku6"
+  },
+  {
+    "appid": 2375550,
+    "wiki": "rgg7_gaiden"
+  },
+  {
+    "appid": 2072450,
+    "wiki": "ryu-ga-gotoku8"
+  },
+  {
+    "appid": 3061810,
+    "wiki": "ryu-ga-gotoku8_pirate"
+  },
+  {
+    "appid": 2864560,
+    "wiki": "ryu-no-kuni"
+  },
+  {
+    "appid": 1502990,
+    "wiki": "lydie"
+  },
+  {
+    "appid": 710470,
+    "wiki": "littlewitchacademia"
+  },
+  {
+    "appid": 1183510,
+    "wiki": "little_town_hero"
+  },
+  {
+    "appid": 1494260,
+    "wiki": "loot_river"
+  },
+  {
+    "appid": 2127430,
+    "wiki": "loop8"
+  },
+  {
+    "appid": 1045620,
+    "wiki": "lulua"
+  },
+  {
+    "appid": 1902960,
+    "wiki": "lostrecords_br"
+  },
+  {
+    "appid": 648100,
+    "wiki": "reijinglup"
+  },
+  {
+    "appid": 1899800,
+    "wiki": "raisondetre"
+  },
+  {
+    "appid": 3384600,
+    "wiki": "layton-jouki"
+  },
+  {
+    "appid": 1307370,
+    "wiki": "rain-city"
+  },
+  {
+    "appid": 2586520,
+    "wiki": "resleriana"
+  },
+  {
+    "appid": 4244930,
+    "wiki": "log_in"
+  },
+  {
+    "appid": 1174180,
+    "wiki": "rdr2"
+  },
+  {
+    "appid": 525240,
+    "wiki": "lostsphear"
+  },
+  {
+    "appid": 606370,
+    "wiki": "romasaga2"
+  },
+  {
+    "appid": 2455640,
+    "wiki": "rs2r"
+  },
+  {
+    "appid": 4214960,
+    "wiki": "rs3r"
+  },
+  {
+    "appid": 952540,
+    "wiki": "romasaga3_hd"
+  },
+  {
+    "appid": 1793030,
+    "wiki": "minstrelsong"
+  },
+  {
+    "appid": 2658450,
+    "wiki": "lolli"
+  },
+  {
+    "appid": 743860,
+    "wiki": "wild_west_online"
+  },
+  {
+    "appid": 1938010,
+    "wiki": "wild-hearts"
+  },
+  {
+    "appid": 1767220,
+    "wiki": "do-not-forget"
+  },
+  {
+    "appid": 1421760,
+    "wiki": "what_comes_after"
+  },
+  {
+    "appid": 2860490,
+    "wiki": "wrt"
+  },
+  {
+    "appid": 1880620,
+    "wiki": "onceupona_katamaridamacy"
+  },
+  {
+    "appid": 3151270,
+    "wiki": "one_turn_kill"
+  },
+  {
+    "appid": 3905010,
+    "wiki": "op-restaurant"
+  },
+  {
+    "appid": 1450120,
+    "wiki": "sen1"
+  },
+  {
+    "appid": 1446780,
+    "wiki": "mh_rise"
+  },
+  {
+    "appid": 555220,
+    "wiki": "detention"
   }
 ]
