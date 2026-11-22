@@ -1,8 +1,5 @@
 """Collect Steam concurrent player counts for H1G.
-
-Input: games.json, a list of {"appid": number, "wiki": "slug"}.
-Output: data/<appid>.json (compatible with existing MediaWiki widget),
-        archive/<appid>.json for monthly older data, status/collection.json.
+Keep data/<appid>.json as a JSON array for existing MediaWiki widgets.
 """
 import json
 import random
@@ -13,10 +10,10 @@ from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+UTC = timezone.utc
 DATA = Path('data')
 ARCHIVE = Path('archive')
 STATUS = Path('status/collection.json')
-UTC = timezone.utc
 
 
 def read_json(path, default):
@@ -32,61 +29,63 @@ def write_json(path, value):
     temp.replace(path)
 
 
-def stamp(row):
+def timestamp(row):
     return datetime.fromisoformat(row['timestamp'].replace('Z', '+00:00')).astimezone(UTC)
 
 
 def aggregate(rows, bucket, period):
-    weights = [max(1, int(r.get('samples', 1))) for r in rows]
-    total = sum(weights)
-    latest = max(rows, key=stamp)
+    samples = sum(int(r.get('samples', 1)) for r in rows)
+    if not samples:
+        raise ValueError('No samples')
+    newest = max(rows, key=timestamp)
     return {
-        'timestamp': latest['timestamp'],
-        'players': round(sum(int(r['players']) * w for r, w in zip(rows, weights)) / total),
+        'timestamp': newest['timestamp'],
+        'players': round(sum(int(r['players']) * int(r.get('samples', 1)) for r in rows) / samples),
         'min': min(int(r.get('min', r['players'])) for r in rows),
         'max': max(int(r.get('max', r['players'])) for r in rows),
-        'samples': total,
+        'samples': samples,
         'period': period,
         'bucket': bucket,
     }
 
 
-def compact(appid, rows, now):
-    recent, daily, older = [], defaultdict(list), []
-    for row in rows:
-        age = now - stamp(row)
-        if age <= timedelta(days=30):
+def compact(appid, records, now):
+    cutoff30 = now - timedelta(days=30)
+    cutoff365 = now - timedelta(days=365)
+    recent = []
+    daily = defaultdict(list)
+    old = []
+    for row in records:
+        when = timestamp(row)
+        if when >= cutoff30:
             recent.append(row)
-        elif age <= timedelta(days=365):
-            daily[stamp(row).strftime('%Y-%m-%d')].append(row)
+        elif when >= cutoff365:
+            daily[when.strftime('%Y-%m-%d')].append(row)
         else:
-            older.append(row)
-
-    if older:
+            old.append(row)
+    if old:
         path = ARCHIVE / f'{appid}.json'
-        existing = read_json(path, [])
+        previous = read_json(path, [])
         groups = defaultdict(list)
-        for row in existing + older:
-            key = row.get('bucket') if row.get('period') == 'month' else stamp(row).strftime('%Y-%m')
+        for row in previous + old:
+            key = row.get('bucket') if row.get('period') == 'month' else timestamp(row).strftime('%Y-%m')
             groups[key].append(row)
-        write_json(path, [aggregate(group, key, 'month') for key, group in sorted(groups.items())])
-
-    reduced = [aggregate(group, key, 'day') for key, group in sorted(daily.items())]
-    return sorted(recent + reduced, key=stamp)
+        write_json(path, [aggregate(rows, key, 'month') for key, rows in sorted(groups.items())])
+    daily_rows = [aggregate(rows, key, 'day') for key, rows in sorted(daily.items())]
+    return sorted(recent + daily_rows, key=timestamp)
 
 
 def fetch(appid):
-    url = ('https://api.steampowered.com/ISteamUserStats/'
-           f'GetNumberOfCurrentPlayers/v1/?appid={appid}')
-    req = urllib.request.Request(url, headers={'User-Agent': 'H1G-Steam-Players/1.0'})
-    with urllib.request.urlopen(req, timeout=20) as response:
-        payload = json.load(response).get('response', {})
-    if payload.get('result') != 1 or 'player_count' not in payload:
-        raise ValueError('No valid player count in API response')
-    players = int(payload['player_count'])
-    if players < 0:
+    url = f'https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid={appid}'
+    request = urllib.request.Request(url, headers={'User-Agent': 'H1G-Steam-Players/1.0'})
+    with urllib.request.urlopen(request, timeout=20) as response:
+        result = json.load(response).get('response', {})
+    if result.get('result') != 1 or 'player_count' not in result:
+        raise ValueError('Steam API returned no valid player count')
+    count = int(result['player_count'])
+    if count < 0:
         raise ValueError('Negative player count')
-    return players
+    return count
 
 
 def main():
@@ -94,18 +93,15 @@ def main():
     ids = list(dict.fromkeys(int(g['appid']) for g in games if g.get('appid')))
     if not ids:
         raise SystemExit('No AppIDs in games.json')
-
     now = datetime.now(UTC)
     result = {'started_at': now.isoformat(timespec='seconds'), 'total': len(ids),
               'ok': 0, 'unavailable': [], 'errors': [], 'rate_limited': False}
-
     for index, appid in enumerate(ids, 1):
         try:
             players = fetch(appid)
             path = DATA / f'{appid}.json'
             history = read_json(path, [])
-            history.append({'timestamp': datetime.now(UTC).isoformat(timespec='seconds'),
-                            'players': players})
+            history.append({'timestamp': datetime.now(UTC).isoformat(timespec='seconds'), 'players': players})
             write_json(path, compact(appid, history, datetime.now(UTC)))
             result['ok'] += 1
             print(f'[{index}/{len(ids)}] OK {appid}: {players}', flush=True)
@@ -124,5 +120,14 @@ def main():
         except (urllib.error.URLError, TimeoutError, ValueError, OSError, json.JSONDecodeError) as exc:
             result['errors'].append({'appid': appid, 'error': str(exc)[:250]})
             print(f'[{index}/{len(ids)}] ERROR {appid}: {exc}', flush=True)
-        if index < len(ids):
+        if index < len(ids) and not result['rate_limited']:
             time.sleep(2 + random.uniform(0, 0.5))
+    result['finished_at'] = datetime.now(UTC).isoformat(timespec='seconds')
+    write_json(STATUS, result)
+    print(f"Completed: {result['ok']} OK, {len(result['unavailable'])} unavailable, {len(result['errors'])} errors", flush=True)
+    if result['errors']:
+        raise SystemExit(1)
+
+
+if __name__ == '__main__':
+    main()
