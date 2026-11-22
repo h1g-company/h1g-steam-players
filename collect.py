@@ -2,6 +2,7 @@
 Keep data/<appid>.json as a JSON array for existing MediaWiki widgets.
 """
 import json
+import os
 import random
 import time
 import urllib.error
@@ -90,13 +91,36 @@ def fetch(appid):
 
 def main():
     games = read_json(Path('games.json'), [])
-    ids = list(dict.fromkeys(int(g['appid']) for g in games if g.get('appid')))
-    if not ids:
+    all_ids = list(dict.fromkeys(int(g['appid']) for g in games if g.get('appid')))
+    if not all_ids:
         raise SystemExit('No AppIDs in games.json')
-    now = datetime.now(UTC)
-    result = {'started_at': now.isoformat(timespec='seconds'), 'total': len(ids),
-              'ok': 0, 'unavailable': [], 'errors': [], 'rate_limited': False}
+
+    offset = int(os.environ.get('H1G_BATCH_OFFSET', '0'))
+    batch_size = int(os.environ.get('H1G_BATCH_SIZE', '0'))
+    if offset < 0 or batch_size < 0 or offset >= len(all_ids):
+        raise SystemExit('Invalid batch offset or size')
+    ids = all_ids[offset:offset + batch_size] if batch_size else all_ids
+    run_id = os.environ.get('GITHUB_RUN_ID')
+
+    if offset:
+        result = read_json(STATUS, {})
+        if not result or result.get('run_id') != run_id or result.get('processed') != offset:
+            raise SystemExit('Cannot continue batch: previous checkpoint is missing or inconsistent')
+    else:
+        now = datetime.now(UTC)
+        result = {
+            'started_at': now.isoformat(timespec='seconds'),
+            'run_id': run_id,
+            'total': len(all_ids),
+            'processed': 0,
+            'ok': 0,
+            'unavailable': [],
+            'errors': [],
+            'rate_limited': False,
+        }
+
     for index, appid in enumerate(ids, 1):
+        position = offset + index
         try:
             players = fetch(appid)
             path = DATA / f'{appid}.json'
@@ -104,27 +128,35 @@ def main():
             history.append({'timestamp': datetime.now(UTC).isoformat(timespec='seconds'), 'players': players})
             write_json(path, compact(appid, history, datetime.now(UTC)))
             result['ok'] += 1
-            print(f'[{index}/{len(ids)}] OK {appid}: {players}', flush=True)
+            print(f'[{position}/{len(all_ids)}] OK {appid}: {players}', flush=True)
         except urllib.error.HTTPError as exc:
             if exc.code in (404, 410):
                 result['unavailable'].append({'appid': appid, 'http': exc.code})
-                print(f'[{index}/{len(ids)}] UNAVAILABLE {appid}: HTTP {exc.code}', flush=True)
+                print(f'[{position}/{len(all_ids)}] UNAVAILABLE {appid}: HTTP {exc.code}', flush=True)
             elif exc.code == 429:
                 result['rate_limited'] = True
                 result['errors'].append({'appid': appid, 'error': 'HTTP 429 rate limited'})
-                print(f'[{index}/{len(ids)}] RATE LIMITED {appid}: stopping', flush=True)
+                print(f'[{position}/{len(all_ids)}] RATE LIMITED {appid}: stopping', flush=True)
+                result['processed'] = position
                 break
             else:
                 result['errors'].append({'appid': appid, 'error': f'HTTP {exc.code}'})
-                print(f'[{index}/{len(ids)}] ERROR {appid}: HTTP {exc.code}', flush=True)
+                print(f'[{position}/{len(all_ids)}] ERROR {appid}: HTTP {exc.code}', flush=True)
         except (urllib.error.URLError, TimeoutError, ValueError, OSError, json.JSONDecodeError) as exc:
             result['errors'].append({'appid': appid, 'error': str(exc)[:250]})
-            print(f'[{index}/{len(ids)}] ERROR {appid}: {exc}', flush=True)
+            print(f'[{position}/{len(all_ids)}] ERROR {appid}: {exc}', flush=True)
+
+        result['processed'] = position
         if index < len(ids) and not result['rate_limited']:
             time.sleep(2 + random.uniform(0, 0.5))
-    result['finished_at'] = datetime.now(UTC).isoformat(timespec='seconds')
+
+    result['last_saved_at'] = datetime.now(UTC).isoformat(timespec='seconds')
+    result['complete'] = (result['processed'] == len(all_ids) and not result['errors'])
+    if result['complete']:
+        result['finished_at'] = result['last_saved_at']
     write_json(STATUS, result)
-    print(f"Completed: {result['ok']} OK, {len(result['unavailable'])} unavailable, {len(result['errors'])} errors", flush=True)
+    print(f"Checkpoint: {result['processed']}/{result['total']}, {result['ok']} OK, "
+          f"{len(result['unavailable'])} unavailable, {len(result['errors'])} errors", flush=True)
     if result['errors']:
         raise SystemExit(1)
 
