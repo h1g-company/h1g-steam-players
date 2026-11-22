@@ -1,10 +1,9 @@
-
 name: Collect Steam Players
 
 on:
   workflow_dispatch:
   schedule:
-   - cron: '43 */3 * * *'
+    - cron: '43 */3 * * *'
 
 permissions:
   contents: write
@@ -21,30 +20,56 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      - name: Collect Steam player counts
+      - name: Collect Steam player counts in saved batches
         id: collect
         continue-on-error: true
-        run: python collect.py
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      - name: Save collected data
+          total=$(python -c "import json; print(len({int(g['appid']) for g in json.load(open('games.json')) if g.get('appid')}))")
+          batch_size=100
+          for ((offset=0; offset<total; offset+=batch_size)); do
+            echo "Collecting batch starting at $offset of $total"
+            set +e
+            H1G_BATCH_OFFSET="$offset" H1G_BATCH_SIZE="$batch_size" python collect.py
+            collect_result=$?
+            set -e
+
+            if [ -d data ]; then git add -A -- data/; fi
+            if [ -d status ]; then git add -A -- status/; fi
+            if [ -d archive ]; then git add -A -- archive/; fi
+            if ! git diff --cached --quiet; then
+              git commit -m "Update Steam player statistics (batch $((offset / batch_size + 1)))"
+              git push origin HEAD:main
+            fi
+
+            if [ "$collect_result" -ne 0 ]; then
+              echo "Collection batch failed; saved all completed records."
+              exit "$collect_result"
+            fi
+          done
+
+      - name: Save any remaining data
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           if [ -d data ]; then git add -A -- data/; fi
           if [ -d status ]; then git add -A -- status/; fi
           if [ -d archive ]; then git add -A -- archive/; fi
-
           if ! git diff --cached --quiet; then
-            git commit -m "Update Steam player statistics"
-            git push
+            git commit -m "Save remaining Steam player statistics"
+            git push origin HEAD:main
           fi
 
       - name: Check collection result
