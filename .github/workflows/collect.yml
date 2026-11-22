@@ -1,3 +1,4 @@
+
 name: Collect Steam Players
 
 on:
@@ -16,29 +17,38 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
       - name: Collect Steam player counts
         id: collect
         continue-on-error: true
         run: python collect.py
-      - name: Save collected data and status
+
+      - name: Save collected data
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- data/ status/
+
+          if [ -d data ]; then git add -A -- data/; fi
+          if [ -d status ]; then git add -A -- status/; fi
           if [ -d archive ]; then git add -A -- archive/; fi
+
           if ! git diff --cached --quiet; then
             git commit -m "Update Steam player statistics"
             git push
           fi
-      - name: Report unexpected collection failures
+
+      - name: Check collection result
         if: steps.collect.outcome == 'failure'
-        run: exit 1
+        run: |
+          echo "Steam player collection encountered errors."
+          exit 1
