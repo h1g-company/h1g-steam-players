@@ -50,7 +50,22 @@ jobs:
             if [ -d archive ]; then git add -A -- archive/; fi
             if ! git diff --cached --quiet; then
               git commit -m "Update Steam player statistics (batch $((offset / batch_size + 1)))"
-              git push origin HEAD:main
+              for attempt in 1 2 3; do
+                git fetch origin main
+                if ! git rebase origin/main; then
+                  echo "Rebase conflict: preserving existing data and stopping safely."
+                  git rebase --abort || true
+                  exit 1
+                fi
+                if git push origin HEAD:main; then
+                  break
+                fi
+                if [ "$attempt" -eq 3 ]; then
+                  echo "Push failed after three attempts."
+                  exit 1
+                fi
+                sleep 3
+              done
             fi
 
             if [ "$collect_result" -ne 0 ]; then
@@ -69,7 +84,22 @@ jobs:
           if [ -d archive ]; then git add -A -- archive/; fi
           if ! git diff --cached --quiet; then
             git commit -m "Save remaining Steam player statistics"
-            git push origin HEAD:main
+            for attempt in 1 2 3; do
+              git fetch origin main
+              if ! git rebase origin/main; then
+                echo "Rebase conflict: preserving existing data and stopping safely."
+                git rebase --abort || true
+                exit 1
+              fi
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push failed after three attempts."
+                exit 1
+              fi
+              sleep 3
+            done
           fi
 
       - name: Check collection result
