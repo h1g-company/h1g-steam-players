@@ -1,1 +1,1 @@
-{"started_at":"2026-11-23T00:02:32+00:00","run_id":"45086429276","total":623,"processed":100,"ok":98,"unavailable":[{"appid":3260830,"http":404},{"appid":4970830,"http":404}],"errors":[],"rate_limited":false,"last_saved_at":"2026-11-23T00:06:33+00:00","complete":false}
+{"started_at":"2026-11-23T00:41:00+00:00","run_id":"45090191803","total":624,"processed":100,"ok":98,"unavailable":[{"appid":3260830,"http":404},{"appid":4970830,"http":404}],"errors":[],"rate_limited":false,"last_saved_at":"2026-11-23T00:44:57+00:00","complete":false}
